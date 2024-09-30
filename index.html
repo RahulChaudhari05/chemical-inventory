@@ -3,18 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Chemical Inventory</title>
+    <title>Chemical Supplies</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <h1>Chemical Supplies</h1>
+
     <div class="toolbar">
-        <button onclick="addRow()">Add</button>
+        <button onclick="addRow()">Add Row</button>
         <button onclick="moveRowUp()">Move Up</button>
         <button onclick="moveRowDown()">Move Down</button>
         <button onclick="deleteRow()">Delete</button>
-        <button onclick="refreshData()">Refresh</button>
+        <button onclick="refreshTable()">Refresh</button>
         <button onclick="saveData()">Save</button>
     </div>
+
     <table id="chemicalTable">
         <thead>
             <tr>
@@ -23,16 +27,16 @@
                 <th onclick="sortTable('vendor')">Vendor</th>
                 <th onclick="sortTable('density')">Density</th>
                 <th onclick="sortTable('viscosity')">Viscosity</th>
-                <th onclick="sortTable('packaging')">Packaging</th>
-                <th onclick="sortTable('packSize')">Pack Size</th>
-                <th onclick="sortTable('unit')">Unit</th>
-                <th onclick="sortTable('quantity')">Quantity</th>
+                <th>Packaging</th>
+                <th>Pack Size</th>
+                <th>Unit</th>
+                <th>Quantity</th>
             </tr>
         </thead>
-        <tbody>
-            <!-- Rows will be populated by JavaScript -->
-        </tbody>
+        <tbody id="tableBody"></tbody>
     </table>
+
     <script src="script.js"></script>
+
 </body>
 </html>
