@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Chemical Inventory</title>
+</head>
+<body>
+    <div class="toolbar">
+        <button onclick="addRow()">Add</button>
+        <button onclick="moveRowUp()">Move Up</button>
+        <button onclick="moveRowDown()">Move Down</button>
+        <button onclick="deleteRow()">Delete</button>
+        <button onclick="refreshData()">Refresh</button>
+        <button onclick="saveData()">Save</button>
+    </div>
+    <table id="chemicalTable">
+        <thead>
+            <tr>
+                <th onclick="sortTable('id')">ID</th>
+                <th onclick="sortTable('name')">Chemical Name</th>
+                <th onclick="sortTable('vendor')">Vendor</th>
+                <th onclick="sortTable('density')">Density</th>
+                <th onclick="sortTable('viscosity')">Viscosity</th>
+                <th onclick="sortTable('packaging')">Packaging</th>
+                <th onclick="sortTable('packSize')">Pack Size</th>
+                <th onclick="sortTable('unit')">Unit</th>
+                <th onclick="sortTable('quantity')">Quantity</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Rows will be populated by JavaScript -->
+        </tbody>
+    </table>
+    <script src="script.js"></script>
+</body>
+</html>
